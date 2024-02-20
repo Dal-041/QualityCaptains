@@ -1,0 +1,41 @@
+{
+	"id":"recovery_operations",
+	"governingAptitude":"industry",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsRecoveryOperations$Level0"},
+			]
+		},
+		{
+			"name":"Level 1",
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				#{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsRecoveryOperations$Level1"},
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsRecoveryOperations$Level1B"},
+				#{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsRecoveryOperations$Level2"},
+			]
+		},
+		{
+			"name":"Level 2",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsRecoveryOperations$Level2"},
+				#{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsRecoveryOperations$Level2A"},
+				#{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsRecoveryOperations$Level2B"},
+			]
+		},
+		{
+			"name":"Level 3",
+			"requiredSkillLevel":3,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsRecoveryOperations$Level3"},
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsRecoveryOperations$Level3B"}
+			]
+		},
+	],
+}

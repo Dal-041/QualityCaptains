@@ -1,0 +1,10 @@
+{
+	#See modSettings.json for configuration options or configure while playing with Lunalib. 
+	
+	#Code stuff
+	"plugins":{
+		"coordinatedManeuversPlugin":"dal.impl.campaign.skills.CaptainsCoordinatedManeuversScript",
+		"electronicWarfarePlugin":"dal.impl.campaign.skills.CaptainsElectronicWarfareScript",
+		"neuralLinkPlugin":"dal.impl.campaign.skills.CaptainsNeuralLinkScript",
+	},
+}

@@ -1,0 +1,27 @@
+{
+	"id":"hull_restoration",
+	"governingAptitude":"industry",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"FLEET",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsHullRestoration$Level1"}, #Recovery guarantee
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsHullRestoration$Level2"}, #Chance to avoid d-mods
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsHullRestoration$Level3"}, #CR bonus per s-mod
+			]
+		},
+		{
+			"name":"Elite",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsHullRestoration$Level4A"}, #Remove d-mods from ships in fleet
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsHullRestoration$Level4B"}, #Remove d-mods from new ships
+			]
+		}
+	],
+}

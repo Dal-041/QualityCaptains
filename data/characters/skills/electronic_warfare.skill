@@ -1,0 +1,23 @@
+{
+	"id":"electronic_warfare",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":"ALL_COMBAT_SHIPS",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsElectronicWarfare$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsElectronicWarfare$Level1A"},
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsElectronicWarfare$Level1B"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"ecm":1}},
+			]
+		},
+	],
+}

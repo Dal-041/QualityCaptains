@@ -1,0 +1,16 @@
+{
+	"id":"captains_academician",
+	"governingAptitude":"aptitude_milestones",
+	"compressHullmods":false,
+	#"scope":ALL_SHIPS,
+	#"scopeStr":"fleet",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.milestones.CaptainsAcademician$Level1"}, #Sensor range bonus
+			]
+		},
+	],
+}

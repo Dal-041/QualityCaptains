@@ -1,0 +1,24 @@
+{
+	"id":"containment_procedures",
+	"governingAptitude":"industry",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsContainmentProcedures$Level1"}, #Combat crew loss reduction
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsContainmentProcedures$Level4"}, #Fuel use reduction
+
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsContainmentProcedures$Level3B"}, #Corona damage reduction
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsContainmentProcedures$Level2"}, #Eburn penalty reduction
+				#{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsContainmentProcedures$Level5"},
+				#{"type":"HULLMOD_UNLOCK", "hullmods":{"solar_shielding":1}},
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsContainmentProcedures$Level1B"}, #Non-combat crew loss reduction, moved desc to Level1
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsContainmentProcedures$Level3"}, #Fuel salvage bonus, moved desc to Level4
+			]
+		},
+	],
+}
+

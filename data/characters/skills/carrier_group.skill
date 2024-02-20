@@ -1,0 +1,23 @@
+{
+	"id":"carrier_group",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	#"scope":ALL_CARRIERS,
+	"scope":CUSTOM,
+	"scopeStr":"all ships with fighter bays",
+	"scope2":CUSTOM,
+	"scopeStr2":"grants +50% (default) increased effect to ships with officers",
+	#"scopeStr":"all ships with non-built-in fighter bays",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_FIGHTERS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsCarrierGroup$Level1"}, #Fighter damage taken reduction
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsCarrierGroup$Level2"}, #Fighter replacement rate bonus
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"converted_hangar":1,"expanded_deck_crew":1, "converted_fighterbay":1}},
+				
+			]
+		},
+	],
+}

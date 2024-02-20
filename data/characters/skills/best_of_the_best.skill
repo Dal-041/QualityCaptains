@@ -1,0 +1,24 @@
+{
+	"id":"best_of_the_best",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"fleet",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsBestOfTheBest$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsBestOfTheBest$Level1"}, #Mods
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsBestOfTheBest$Level2"}, #Objective DP bonus
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsBestOfTheBest$Level3"}, #Command regen bonus
+			]
+		},
+	],
+}

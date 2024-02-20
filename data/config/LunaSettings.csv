@@ -1,0 +1,346 @@
+fieldID,fieldName,fieldType,defaultValue,secondaryValue,fieldDescription,minValue,maxValue,tab
+qc_installed,Quality Captains Installed,Boolean,TRUE,,Toggles if QC's scripts are installed in this game. Toggle off to uninstall,,,
+qc_useCustomBattleEffects,Custom Values - BattleEffects,Boolean,TRUE,,Toggle whether to use custom values for this category below or fallback to defaults,,,
+qc_useMilestones,Custom Milestones Enabled,Boolean,TRUE,,Toggles whether milestone perks will be enabled and awarded,,,
+qc_warnBounds,"NOTE: SLIDERS ALLOW EXTREME VALUES, USE CAUTION",Header,"NOTE: SLIDERS ALLOW EXTREME VALUES, USE CAUTION",,"NOTE: SLIDERS ALLOW EXTREME VALUES, USE CAUTION",,,
+qc_titleCombat,Combat Skills,Header,Combat Skills,,Combat Skills,,,Combat
+qc_titleHelmsmanship,Helmsmanship,Header,Helmsmanship,,Helmsmanship,,,Combat
+HELM_MANEUVERABILITY_BONUS,HELM_MANEUVERABILITY_BONUS,Double,50,,%% bonus,-1000,1000,Combat
+HELM_SPEED_BONUS,HELM_SPEED_BONUS,Double,15,, %% of top speed,-1000,1000,Combat
+HELM_FLUX_THRESHOLD,HELM_FLUX_THRESHOLD,Double,1,, %% of total flux below which 0FSB is active,0.25,100,Combat
+HELM_0FLUXBOOST_ANYDECAYING_ENABLED,HELM_0FLUXBOOST_ANYDECAYING_ENABLED,Boolean,FALSE,, 0-Flux Speed Boost active at any flux level as long as you're not generated any flux,,,Combat
+HELM_0FLUXBOOST_THRESHOLD_ENABLED,HELM_0FLUXBOOST_THRESHOLD_ENABLED,Boolean,TRUE,, 0-Flux Speed Boost active above 0 flux up to threshold,,,Combat
+HELM_FLAT_SPEED_BONUS,HELM_FLAT_SPEED_BONUS,Int,10,, flat bonus,-600,600,Combat
+qc_titleCombatEndurance,Combat Endurance,Header,Combat Endurance,,Combat Endurance,,,Combat
+CE_PPT_BONUS,CE_PPT_BONUS,Int,60,,seconds,-1000,10000,Combat
+CE_MAX_CR_BONUS,CE_MAX_CR_BONUS,Double,15,,%%,-1000,1000,Combat
+CE_DEGRADATION_RATE_REDUCTION,CE_DEGRADATION_RATE_REDUCTION,Double,25,,Reduces the rate combat readiness decreases after PPT runs out,-1000,100,Combat
+CE_MALFUNCTION_REDUCTION,CE_MALFUNCTION_REDUCTION,Double,50f,,%%,-1000,100,Combat
+CE_BEGIN_REPAIR_BELOW,CE_BEGIN_REPAIR_BELOW,Double,0.75f,,Fraction of hull,0.01,1,Combat
+CE_HP_REPAIR_LIMIT,CE_HP_REPAIR_LIMIT,Int,8000,, In hitpoints,0,999999,Combat
+CE_HP_REPAIR_RATE,CE_HP_REPAIR_RATE,Double,0.5f,, %%/second,1,100,Combat
+qc_titleImpactMitigation,Impact Mitigation,Header,Impact Mitigation,,Impact Mitigation,,,Combat
+IM_ARMOR_DAMAGE_REDUCTION_BONUS,IM_ARMOR_DAMAGE_REDUCTION_BONUS,Double,30,, Reduces armor damage taken but no change to rating,-1000,1000,Combat
+IM_ARMOR_EFFECTIVE_BONUS,IM_ARMOR_EFFECTIVE_BONUS,Double,30,, Default unused - Armor is rated this proportion higher for reducing incoming damage,-1000,1000,Combat
+IM_MAX_DAMAGE_REDUCTION_BONUS,IM_MAX_DAMAGE_REDUCTION_BONUS,Double,0.05f,, 0.05 = 5%% (default base val is 85%%),-100,100,Combat
+IM_MIN_ARMOR_FRACTION_BONUS,IM_MIN_ARMOR_FRACTION_BONUS,Double,0.05f,, 0.05 = 5%% (default base val is 5%%),-100,100,Combat
+IM_ARMOR_BONUS,IM_ARMOR_BONUS,Double,150,," flat, default unused",-10000,10000,Combat
+qc_titleDamageControl,Damage Control,Header,Damage Control,,Hull damage reduction moved to Polarized Armor,,,Combat
+DC_CREW_LOSS_REDUCTION,DC_CREW_LOSS_REDUCTION,Double,35,, Higher values = fewer losses. Currently unused,-1000,100,Combat
+DC_HULL_DAMAGE_REDUCTION,DC_HULL_DAMAGE_REDUCTION,Double,25,, %%,-1000,1000,Combat
+DC_COMPONENT_REPAIR_BONUS,DC_COMPONENT_REPAIR_BONUS,Double,75,,Rate bonus to in-combat weapon and engine repairs,-100,99,Combat
+DC_COMPONENT_DAMAGE_TAKEN_REDUCTION,DC_COMPONENT_DAMAGE_TAKEN_REDUCTION,Double,50,,Reduction to damage taken by weapons and engines,-100,100,Combat
+DC_SHIP_INSTA_REPAIR,DC_SHIP_INSTA_REPAIR,Int,25,, %% automatically repaired after combat. Currently unused,-100,100,Combat
+DC_USE_HIT_NULL,DC_USE_HIT_NULL,Boolean,FALSE,,"Toggle effect: every X seconds, reduce a hit over a certain strength",,,Combat
+DC_HIT_NULL_MIN,DC_HIT_NULL_MIN,Double,1000,,Damage,0,100000,Combat
+DC_HIT_NULL_PERC,DC_HIT_NULL_PERC,Double,100,,%% of damage to null,1,100,Combat
+DC_HIT_NULL_COOLDOWN,DC_HIT_NULL_COOLDOWN,Double,3600,,in seconds,0,10000,Combat
+qc_titleFieldModulation,Field Modulation,Header,Field Modulation,,Field Modulation,,,Combat
+FM_DAMAGE_TO_SHIELD_REDUCTION,FM_DAMAGE_TO_SHIELD_REDUCTION,Double,10,,%%,-1000,1000,Combat
+FM_SHIELD_RATES_BONUS,FM_SHIELD_RATES_BONUS,Double,25,,%% bonus to raising and moving shields,-1000,1000,Combat
+FM_PHASE_UPKEEP_REDUCTION,FM_PHASE_UPKEEP_REDUCTION,Double,25,,%%,-1000,1000,Combat
+FM_PHASE_FLUX_THRESHOLD_BONUS,FM_PHASE_FLUX_THRESHOLD_BONUS,Double,0.25f,,"fraction, flat increase to flux slowdown grace threshold",-1000,1000,Combat
+FM_SHIELD_HFLUX_DISSIPATION_RATE,FM_SHIELD_HFLUX_DISSIPATION_RATE,Double,15,,%%,-1000,1000,Combat
+FM_PHASE_COOLDOWN_REDUCTION,FM_PHASE_COOLDOWN_REDUCTION,Double,35,,%%,-1000,1000,Combat
+qc_titlePointDefense,Point Defense,Header,Point Defense,,Point Defense,,,Combat
+PD_FIGHTER_DAMAGE_BONUS,PD_FIGHTER_DAMAGE_BONUS,Double,50,,%%,-1000,1000,Combat
+PD_MISSILE_DAMAGE_BONUS,PD_MISSILE_DAMAGE_BONUS,Double,50,,%%,-1000,1000,Combat
+PD_TURRET_TURN_BONUS,PD_TURRET_TURN_BONUS,Double,25,,%% increase for all turrets,-1000,1000,Combat
+PD_FTR_ANTIFIGHTER_BONUS_MULT,PD_FTR_ANTIFIGHTER_BONUS_MULT,Double,0.25f,, Multiplied with the base bonus for final value (e.g. 0.5*0.25 = 0.125),-100,100,Combat
+PD_FTR_ANTIMISSILE_BONUS_MULT,PD_FTR_ANTIMISSILE_BONUS_MULT,Double,0.5f,, Multiplied with the base bonus for final value (e.g. 0.5*0.5 = 0.25),-100,100,Combat
+PD_RANGE_BONUS_FLAT,PD_RANGE_BONUS_FLAT,Double,100,,,-1000,10000,Combat
+PD_RANGE_BONUS_PERC,PD_RANGE_BONUS_PERC,Double,40,, Currently unused but it's there,-1000,1000,Combat
+qc_titleTargetAnalysis,Target Analysis,Header,Target Analysis,,Target Analysis,,,Combat
+TA_DAM_TO_CAP_BONUS,TA_DAM_TO_CAP_BONUS,Double,15,,%%,-1000,1000,Combat
+TA_DAM_TO_CRUISER_BONUS,TA_DAM_TO_CRUISER_BONUS,Double,10,,%%,-1000,1000,Combat
+TA_DAM_TO_DEST_BONUS,TA_DAM_TO_DEST_BONUS,Double,5,,%%,-1000,1000,Combat
+TA_DAM_TO_FRIG_BONUS,TA_DAM_TO_FRIG_BONUS,Double,0,,%%,-1000,1000,Combat
+TA_DAM_TO_COMP_BONUS,TA_DAM_TO_COMP_BONUS,Double,80,,%% bonus damage to engines and weapons,-1000,1000,Combat
+TA_ARMOR_BREACH_BONUS,TA_ARMOR_BREACH_BONUS,Double,30,, Hits are this %% more effective overcoming armor damage reduction,-1000,1000,Combat
+qc_titleFireControl,Fire Control,Header,Fire Control,,Fire Control,,,Combat
+FC_DAMAGE_TO_SHIELD_BONUS,FC_DAMAGE_TO_SHIELD_BONUS,Double,10,,%%,-1000,1000,Combat
+FC_RANGE_BONUS,FC_RANGE_BONUS,Double,10,,%%,-1000,1000,Combat
+FC_PROJ_SPEED_BONUS,FC_PROJ_SPEED_BONUS,Double,30,,%%,-1000,1000,Combat
+qc_titleSystemsExpertise,Systems Expertise,Header,Systems Expertise,,Systems Expertise,,,Combat
+SE_CHARGES_FLAT,SE_CHARGES_FLAT,Int,1,,Increase system charges by this,-100,100,Combat
+SE_REGEN_PERCENT,SE_REGEN_PERCENT,Double,25,,%%,-1000,1000,Combat
+SE_CHARGES_PERCENT,SE_CHARGES_PERCENT,Double,35,, %% bonus to charge ,-1000,1000,Combat
+SE_RANGE_PERCENT,SE_RANGE_PERCENT,Double,25,,%%,-1000,1000,Combat
+SE_COOLDOWN_REDUCTION,SE_COOLDOWN_REDUCTION,Double,25,,%%,-1000,1000,Combat
+SE_NO_OFFICER_MULT,SE_NO_OFFICER_MULT,Double,0.5f,,"Strength of skill for ships without officers, if applicable",0,5,Combat
+qc_titleMissile Specialization,Missile Specialization,Header,Missile Specialization,,Missile Specialization,,,Combat
+MS_AMMO_BONUS_1,MS_AMMO_BONUS_1,Double,50,,%% bonus to base ammo capacity,-1000,1000,Combat
+MS_AMMO_BONUS_2,MS_AMMO_BONUS_2,Double,50,,%% bonus to base ammo capacity,-1000,1000,Combat
+MS_HEALTH_BONUS,MS_HEALTH_BONUS,Double,30,,%% bonus to missile health,-1000,1000,Combat
+MS_ROF_BONUS,MS_ROF_BONUS,Double,35,,%%,-1000,1000,Combat
+MS_SPEED_BONUS,MS_SPEED_BONUS,Double,25,,"%%, not used",-1000,1000,Combat
+MS_RANGE_MULT,MS_RANGE_MULT,Double,0.8f,,To keep missile range the same use 1 / (1 + spdBns/100),-1000,1000,Combat
+MS_TURN_ACCEL_BONUS,MS_TURN_ACCEL_BONUS,Double,40,,%%,-1000,1000,Combat
+MS_TURN_RATE_BONUS,MS_TURN_RATE_BONUS,Double,25,,%%,-1000,1000,Combat
+MS_ACCEL_BONUS,MS_ACCEL_BONUS,Double,25,,%%,-1000,1000,Combat
+qc_titleLeadership,Leadership,Header,Leadership,,Leadership,,,Leadership
+qc_titleTacticalDrills,Tactical Drills,Header,Tactical Drills,,Tactical Drills,,,Leadership
+TD_TURRET_LEADING_PERC,TD_TURRET_LEADING_PERC,Double,25,,%%,-1000,1000,Leadership
+TD_WEAPON_RECOIL_NEG_PERC,TD_WEAPON_RECOIL_NEG_PERC,Double,20,,Recoil reduction %%,-1000,1000,Leadership
+TD_WEAPON_ROF_BONUS,TD_WEAPON_ROF_BONUS,Double,6,,%%,-1000,1000,Leadership
+TD_GROUND_ATTACK_BONUS,TD_GROUND_ATTACK_BONUS,Int,50,,%%,-1000,1000,Leadership
+TD_GROUND_DEFENSE_BONUS,TD_GROUND_DEFENSE_BONUS,Int,50,,%%,-1000,1000,Leadership
+TD_GROUND_CASUALTIES_MULT,TD_GROUND_CASUALTIES_MULT,Double,0.65f,, Multiplies against total. 0.75 = 25%% reduction,0,1,Leadership
+qc_titleCoordinatedManeuvers,Coordinated Maneuvers,Header,Coordinated Maneuvers,,Coordinated Maneuvers,,,Leadership
+CM_REGEN_FRIG_BONUS,CM_REGEN_FRIG_BONUS,Double,50,, Command regeneration bonus for ship type with officer,-1000,1000,Leadership
+CM_REGEN_DEST_BONUS,CM_REGEN_DEST_BONUS,Double,25,, Command regeneration bonus for ship type with officer,-1000,1000,Leadership
+CONAV_PTS_FOR_LEVELS,CONAV_PTS_FOR_LEVELS,Boolean,TRUE,,Grant Nav points per deployed officer level,,,Leadership
+CONAV_PTS_FOR_HULLSIZE,CONAV_PTS_FOR_HULLSIZE,Boolean,FALSE,,Grant Nav points per deployed ship,,,Leadership
+CONAV_PTS_FRIG,CONAV_PTS_FRIG,Int,1,,,-100,100,Leadership
+CONAV_PTS_DEST,CONAV_PTS_DEST,Int,1,,,-100,100,Leadership
+CONAV_PTS_CRSR,CONAV_PTS_CRSR,Int,1,,,-100,100,Leadership
+CONAV_PTS_CAP,CONAV_PTS_CAP,Int,1,,,-100,100,Leadership
+qc_titleNavigationCombatEffects,Navigation Combat Effects,Header,Navigation Combat Effects,,Navigation Combat Effects,,,Leadership
+BATTLE_NAV_MAX,BATTLE_NAV_MAX,Double,10,, Maximum bonus applied by nav effects and beacons,-1000,1000,Leadership
+BATTLE_NAV_MULT_BUOY,BATTLE_NAV_MULT_BUOY,Double,1,, Buoy capture effect is 5 * this,-10,10,Leadership
+BATTLE_NAV_APPLY_TO_SPEED,BATTLE_NAV_APPLY_TO_SPEED,Boolean,TRUE,,,,,Leadership
+BATTLE_NAV_APPLY_TO_MANEUVER,BATTLE_NAV_APPLY_TO_MANEUVER,Boolean,TRUE,,,,,Leadership
+BATTLE_NAV_SHIPS,BATTLE_NAV_SHIPS,Boolean,TRUE,, Do ships benefit from your fleet's Nav Rating in battle?,,,Leadership
+BATTLE_NAV_FIGHTERS,BATTLE_NAV_FIGHTERS,Boolean,TRUE,, Do fighters benefit from your fleet's Nav Rating?,,,Leadership
+BATTLE_NAV_MISSILES,BATTLE_NAV_MISSILES,Boolean,TRUE,, Do missiles benefit from your fleet's Nav Rating?,,,Leadership
+BATTLE_NAV_MULT_SHIPS,BATTLE_NAV_MULT_SHIPS,Double,1,,Fraction of effect to apply to this type,-10,10,Leadership
+BATTLE_NAV_MULT_FIGHTERS,BATTLE_NAV_MULT_FIGHTERS,Double,1,,Fraction of effect to apply to this type,-10,10,Leadership
+BATTLE_NAV_MULT_MISSILES,BATTLE_NAV_MULT_MISSILES,Double,1,,Fraction of effect to apply to this type,-10,10,Leadership
+BATTLE_NAV_MULT_SPEED,BATTLE_NAV_MULT_SPEED,Double,1,,Fraction of effect to apply,-10,10,Leadership
+BATTLE_NAV_MULT_MANEUVER,BATTLE_NAV_MULT_MANEUVER,Double,1,,Fraction of effect to apply,-10,10,Leadership
+qc_titleWolfpackTactics,Wolfpack Tactics,Header,Wolfpack Tactics,,Wolfpack Tactics,,,Leadership
+WP_PEAK_TIME_BONUS_FRIG,WP_PEAK_TIME_BONUS_FRIG,Double,50,, %% bonus,-1000,1000,Leadership
+WP_PEAK_TIME_BONUS_DEST,WP_PEAK_TIME_BONUS_DEST,Double,35,, %% bonus,-1000,1000,Leadership
+WP_DAM_BONUS_FRIG,WP_DAM_BONUS_FRIG,Double,10,, %% bonus,-1000,1000,Leadership
+WP_DAM_BONUS_DEST,WP_DAM_BONUS_DEST,Double,0,, %% bonus,-1000,1000,Leadership
+WP_NFLUX_BOOST,WP_NFLUX_BOOST,Int,10,,Flat bonus to no-flux speed boost,-600,600,Leadership
+WP_MANEUVER_BONUS,WP_MANEUVER_BONUS,Int,40,, %% bonus,-1000,1000,Leadership
+WP_SPEED_BONUS,WP_SPEED_BONUS,Int,10,,Flat bonus,-600,600,Leadership
+qc_titleCrewTraining,Crew Training,Header,Crew Training,,Crew Training,,,Leadership
+CT_CR_BONUS,CT_CR_BONUS,Int,15,,%%,-1000,1000,Leadership
+CT_PPT_BONUS,CT_PPT_BONUS,Int,30,,%%,-1000,1000,Leadership
+qc_titleCarrierGroup,Carrier Group,Header,Carrier Group,,Carrier Group,,,Leadership
+ALL_FTR_DAMAGE_REDUCTION,ALL_FTR_DAMAGE_REDUCTION,Double,15,,%%,-1000,1000,Leadership
+ALL_FTR_REPLACEMENT_RATE_BONUS,ALL_FTR_REPLACEMENT_RATE_BONUS,Double,20,,%%,-1000,1000,Leadership
+ALL_FTR_REPLACEMENT_RATE_OFFICER_MULT,ALL_FTR_REPLACEMENT_RATE_OFFICER_MULT,Double,1.5f,, Effect multiplier for carriers with officers,-1000,1000,Leadership
+qc_titleFighterUplink,Fighter Uplink,Header,Fighter Uplink,,Fighter Uplink,,,Leadership
+FTRUP_MAX_SPEED_BONUS,FTRUP_MAX_SPEED_BONUS,Double,10,,%%,-1000,1000,Leadership
+FTRUP_CREW_LOSS_REDUCTION,FTRUP_CREW_LOSS_REDUCTION,Double,50,,%%,-1000,1000,Leadership
+FTRUP_TARGET_LEADING_BONUS,FTRUP_TARGET_LEADING_BONUS,Double,50,,%%,-1000,1000,Leadership
+qc_titleOfficer Training,Officer Training,Header,Officer Training,,Officer Training,,,Leadership
+OT_MAX_LEVEL_BONUS,OT_MAX_LEVEL_BONUS,Int,1,,Flat,-10,10,Leadership
+OT_MAX_ELITE_SKILLS_BONUS,OT_MAX_ELITE_SKILLS_BONUS,Int,1,,Flat,-10,10,Leadership
+OT_COMPOINT_BONUS,OT_COMPOINT_BONUS,Int,2,,Flat command points,0,50,Leadership
+qc_titleOfficerManagement,Officer Management,Header,Officer Management,,Officer Management,,,Leadership
+OM_NUM_OFFICERS_BONUS,OM_NUM_OFFICERS_BONUS,Int,2,,Flat,-10,10,Leadership
+OM_MAX_ELITE_SKILLS_BONUS,OM_MAX_ELITE_SKILLS_BONUS,Int,1,,Flat,-10,10,Leadership
+OM_COMPOINT_BONUS,OM_COMPOINT_BONUS,Int,2,,Flat command points,0,50,Leadership
+qc_titleBestoftheBest,Best of the Best,Header,Best of the Best,,Best of the Best,,,Leadership
+BOTB_SMOD_CAP_BONUS,BOTB_SMOD_CAP_BONUS,Int,1,,Flat,-100,100,Leadership
+BOTB_LMOD_CAP_BONUS,BOTB_LMOD_CAP_BONUS,Int,1,,Flat,-100,100,Leadership
+BOTB_BASE_DP_BONUS,BOTB_BASE_DP_BONUS,Double,10f,,%% of objective budget automatically granted for ship deployment,-1000,1000,Leadership
+BOTB_COMMAND_REC_BONUS,BOTB_COMMAND_REC_BONUS,Double,100,,%% increase to recovery rate,-1000,1000,Leadership
+qc_titleArmadaDoctrine,Armada Doctrine,Header,Armada Doctrine,,Armada Doctrine,,,Leadership
+AD_SPEED_BONUS,AD_SPEED_BONUS,Boolean,TRUE,,Helmsmanship for uncaptained ships,,,Leadership
+AD_DAM_CONTROL_BONUS,AD_DAM_CONTROL_BONUS,Boolean,TRUE,,Damage Control for uncaptained ships,,,Leadership
+AD_ORDINANCE_BONUS,AD_ORDINANCE_BONUS,Boolean,TRUE,,Ordinance Expertise for uncaptained ships,,,Leadership
+AD_ENDURANCE_BONUS,AD_ENDURANCE_BONUS,Boolean,FALSE,,Combat Endurance for uncaptained ships,,,Leadership
+AD_ENDURANCE_GEN_MULT,AD_ENDURANCE_GEN_MULT,Double,0.5f,,Multiplier to uncaptained CE benefits,-10,10,Leadership
+AD_DP_REDUCTION,AD_DP_REDUCTION,Double,0.2f,,Proportionate. 0.2 = 20%%. ,-10,10,Leadership
+AD_DP_REDUCTION_MAX,AD_DP_REDUCTION_MAX,Double,10,,Flat deployment points,-100,100,Leadership
+AD_USE_BATTLESIZE_SCALING,AD_USE_BATTLESIZE_SCALING,Boolean,TRUE,, The reduction cap will be based on (MAX * battlesize/400),,,Leadership
+qc_titleTechnology,Technology,Header,Technology,,Technology,,,Technology
+qc_titleNavigation,Navigation,Header,Navigation,,Navigation,,,Technology
+TERRAIN_PENALTY_REDUCTION,TERRAIN_PENALTY_REDUCTION,Double,30,,%%,-1000,1000,Technology
+FLEET_BURN_BONUS,FLEET_BURN_BONUS,Double,1,,Flat,-20,20,Technology
+SB_BURN_BONUS,SB_BURN_BONUS,Double,1,,Flat,-20,20,Technology
+qc_titleSensors,Sensors,Header,Sensors,,Sensors,,,Technology
+DETECTED_AT_REDUCTION,DETECTED_AT_REDUCTION,Double,25,,%%,-1000,1000,Technology
+SENSOR_BONUS,SENSOR_BONUS,Double,50,,%%,-100,1000,Technology
+SLOW_BURN_BONUS,SLOW_BURN_BONUS,Double,3,,Flat bonus to slow-burning,-20,20,Technology
+GO_DARK_PROFILE_MULT,GO_DARK_PROFILE_MULT,Double,0.8f,,Your sensor profile while running dark will be multiplied by this fraction. 0.8 = 80%% profile,0,2,Technology
+qc_titleGunneryImplants,Gunnery Implants,Header,Gunnery Implants,,Gunnery Implants,,,Technology
+GI_RANGE_BONUS,GI_RANGE_BONUS,Double,10,,"%%, Compounds with Fire Control",-1000,1000,Technology
+GI_RECOIL_REDUCTION,GI_RECOIL_REDUCTION,Double,35,,%%,-1000,1000,Technology
+GI_TARGET_LEADING_BONUS,GI_TARGET_LEADING_BONUS,Double,100,,%%,-100,100,Technology
+GI_WEAPON_HP_BONUS,GI_WEAPON_HP_BONUS,Double,20,,%%,-1000,1000,Technology
+qc_titleEnergyMastery,Energy Mastery,Header,Energy Mastery,,Energy Mastery,,,Technology
+EWM_ENERGY_DAMAGE_MIN_FLUX_LEVEL,EWM_ENERGY_DAMAGE_MIN_FLUX_LEVEL,Double,0f,,Bonuses will begin when your ship is above this flux %%,0,99,Technology
+EWM_ENERGY_DAMAGE_PERCENT,EWM_ENERGY_DAMAGE_PERCENT,Double,30,,%% maximum bonus,-1000,1000,Technology
+EWM_MIN_RANGE,EWM_MIN_RANGE,Double,200,,Below this range you'll receive the full bonus,0,100000,Technology
+EWM_MAX_RANGE,EWM_MAX_RANGE,Double,1000,,Above this range you'll receive no bonus,0,100000,Technology
+EWM_BEAM_DAM_BONUS,EWM_BEAM_DAM_BONUS,Double,10,, %%,-1000,1000,Technology
+EWM_FLUX_COST_MULT,EWM_FLUX_COST_MULT,Double,0.9f,,Multiplier for weapon flux use,-1000,1000,Technology
+EWM_BEAM_FLUX_MULT,EWM_BEAM_FLUX_MULT,Double,0.9f,,Multiplier for weapon flux use,-1000,1000,Technology
+EWM_BEAM_TURN_BONUS,EWM_BEAM_TURN_BONUS,Double,25,,%% rate bonus,-1000,1000,Technology
+EWM_ENERGY_AMMO_BONUS,EWM_ENERGY_AMMO_BONUS,Double,25,,%% ammo increase,-1000,1000,Technology
+EWM_EMP_DAM_REDUCTION,EWM_EMP_DAM_REDUCTION,Double,20,,%% less EMP damage taken,-1000,1000,Technology
+qc_titleElectronicWarfare,Electronic Warfare,Header,Electronic Warfare,,Electronic Warfare,,,Technology
+ECM_SCORE_SKILLS,ECM_SCORE_SKILLS,Boolean,TRUE,, ECM rating is increased for each ECM skill your deployed officers possess,,,Technology
+ECM_SCORE_OFFICER_LEVELS,ECM_SCORE_OFFICER_LEVELS,Boolean,FALSE,, ECM rating is increased for all your officer's levels combined,,,Technology
+ECM_SCORE_HULLSIZE,ECM_SCORE_HULLSIZE,Boolean,FALSE,, ECM rating is increased based on the size of the ships in your fleet,,,Technology
+EWAR_VAL_FRIG,EWAR_VAL_FRIG,Int,1,,,-1000,1000,Technology
+EWAR_VAL_DEST,EWAR_VAL_DEST,Int,1,,,-1000,1000,Technology
+EWAR_VAL_CRSR,EWAR_VAL_CRSR,Int,1,,,-1000,1000,Technology
+EWAR_VAL_CAP,EWAR_VAL_CAP,Int,1,,,-1000,1000,Technology
+EWAR_CAP_BONUS_RANGE,EWAR_CAP_BONUS_RANGE,Double,500f,,Bonus to capturing objectives in combat,0,10000,Technology
+EWAR_CAP_BONUS_RATE,EWAR_CAP_BONUS_RATE,Double,2f,,Bonus to capturing objectives in combat,-1,10,Technology
+qc_titleEWarCombatCustomization,EWar Combat Customization,Header,EWar Combat Customization,,EWar Combat Customization,,,Technology
+ECM_MAX,ECM_MAX,Double,20,,Maximum effect,0,200,Technology
+ECM_JAMMER_MULT,ECM_JAMMER_MULT,Double,1,, Multiplier for the value of combat objectives,-10,10,Technology
+ECM_SHIPS,ECM_SHIPS,Boolean,TRUE,,Apply ECM effects to this type?,,,Technology
+ECM_FIGHTERS,ECM_FIGHTERS,Boolean,TRUE,,Apply ECM effects to this type?,,,Technology
+ECM_TURRETS,ECM_TURRETS,Boolean,TRUE,,Apply ECM effects to this type?,,,Technology
+ECM_MISSILES,ECM_MISSILES,Boolean,TRUE,,Apply ECM effects to this type?,,,Technology
+ECM_AUTOAIM,ECM_AUTOAIM,Boolean,TRUE,,Apply ECM effects to this type?,,,Technology
+ECM_RANGE,ECM_RANGE,Boolean,FALSE,,Apply ECM effects to this type?,,,Technology
+ECM_RECOIL,ECM_RECOIL,Boolean,TRUE,,Apply ECM effects to this type?,,,Technology
+ECM_TURRET_TURNRATE,ECM_TURRET_TURNRATE,Boolean,FALSE,,Apply ECM effects to this type?,,,Technology
+ECM_MISSILE_TURNRATE,ECM_MISSILE_TURNRATE,Boolean,TRUE,,Apply ECM effects to this type?,,,Technology
+ECM_AUTOAIM_MULT,ECM_AUTOAIM_MULT,Double,1,, ECM rating multiplied by this for this penalty type,-10,10,Technology
+ECM_RECOIL_MULT,ECM_RECOIL_MULT,Double,2,, ECM rating multiplied by this for this penalty type,-10,10,Technology
+ECM_RANGE_MULT,ECM_RANGE_MULT,Double,1,, ECM rating multiplied by this for this penalty type,-10,10,Technology
+ECM_TURRET_TURNRATE_MULT,ECM_TURRET_TURNRATE_MULT,Double,0.5f,, ECM rating multiplied by this for this penalty type,-10,10,Technology
+ECM_MISSILE_TURNRATE_MULT,ECM_MISSILE_TURNRATE_MULT,Double,1,, ECM rating multiplied by this for this penalty type,-10,10,Technology
+qc_titleFluxRegulation,Flux Regulation,Header,Flux Regulation,,Flux Regulation,,,Technology
+FLXREG_CAPACITORS_BONUS,FLXREG_CAPACITORS_BONUS,Int,5,,Flat bonus,-100,100,Technology
+FLXREG_VENTS_BONUS,FLXREG_VENTS_BONUS,Int,5,,Flat bonus,-100,100,Technology
+FLXREG_FLEET_DISSIPATION_BONUS,FLXREG_FLEET_DISSIPATION_BONUS,Double,10,,%% bonus,-1000,1000,Technology
+FLXREG_FLEET_CAPACITOR_BONUS,FLXREG_FLEET_CAPACITOR_BONUS,Double,10,,%% bonus,-1000,1000,Technology
+qc_titlePhaseCoilTuning,Phase Coil Tuning,Header,Phase Coil Tuning,,Phase Coil Tuning,,,Technology
+PFLT_USE_PPT_BONUS,PFLT_USE_PPT_BONUS,Boolean,FALSE,,,,,Technology
+PFLT_USE_SPEED_BONUS,PFLT_USE_SPEED_BONUS,Boolean,TRUE,,If you enable both of these you're gonna run out of description space,,,Technology
+PFLT_FLUX_UPKEEP_REDUCTION,PFLT_FLUX_UPKEEP_REDUCTION,Double,20,,%%,-1000,1000,Technology
+PFLT_PEAK_TIME_BONUS,PFLT_PEAK_TIME_BONUS,Double,60,,"%%, currently unused",-1000,1000,Technology
+PFLT_COOLDOWN_REDUCTION,PFLT_COOLDOWN_REDUCTION,Double,20,,%%,-1000,1000,Technology
+PFLT_PHASE_FIELD_BONUS_SIG_REDUCTION,PFLT_PHASE_FIELD_BONUS_SIG_REDUCTION,Double,50,,%%,-1000,1000,Technology
+PFLT_PHASE_FIELD_BONUS_SENSOR,PFLT_PHASE_FIELD_BONUS_SENSOR,Double,50,,%%,-1000,1000,Technology
+PFLT_PHASED_SPEED_BONUS,PFLT_PHASED_SPEED_BONUS,Double,35,,%%,-1000,1000,Technology
+qc_titleCyberneticAugmentations,Cybernetic Augmentations,Header,Cybernetic Augmentations,,Cybernetic Augmentations,,,Technology
+CA_USE_GUNNERY_BONUS,CA_USE_GUNNERY_BONUS,Boolean,TRUE,, Adds basic gunnery implants to all ships without officers,,,Technology
+CA_GEN_GUNNERY_MULT,CA_GEN_GUNNERY_MULT,Double,0.5f,,Multiplier for gunnery implants without officers,-10,10,Technology
+CA_MAX_ELITE_SKILLS_BONUS,CA_MAX_ELITE_SKILLS_BONUS,Int,1,,Flat,-10,10,Technology
+CA_USE_SYSTEMS_BONUS,CA_USE_SYSTEMS_BONUS,Boolean,TRUE,, Turn it on,,,Technology
+CA_SEX_MULT,CA_SEX_MULT,Double,0.5f,, 0-1. If you turn it on,0,10,Technology
+qc_titleInfomorphology,Infomorphology,Header,Infomorphology,,Infomorphology,,,Technology
+NRL_ALLOW_CONTROL_DURING_XFER,NRL_ALLOW_CONTROL_DURING_XFER,Boolean,FALSE,, Lets the player perform more actions while timed transfer is occurring,,,Technology
+NRL_ALLOW_ANY_ALL,NRL_ALLOW_ANY_ALL,Boolean,FALSE,, Removes all restrictions on linking to ships in your fleet. You probably don't want to enable this,,,Technology
+NRL_INSTANT_TRANSFER_PT_MAX,NRL_INSTANT_TRANSFER_PT_MAX,Double,60,,Ships of this or lower deployment point cost can be instantly transferred to,0,1000,Technology
+NRL_TRANSFER_RATE_PER_DP,NRL_TRANSFER_RATE_PER_DP,Double,0.1f,, seconds/DP,0.01,10,Technology
+NRL_TRANSFER_MAX_TIME,NRL_TRANSFER_MAX_TIME,Double,3f,,Flat seconds,0,600,Technology
+NRL_MAX_ELITE_SKILLS_BONUS,NRL_MAX_ELITE_SKILLS_BONUS,Double,1,,Flat increase,0,100,Technology
+NRL_UNWISE_HULLMODLESS,NRL_UNWISE_HULLMODLESS,Boolean,FALSE,, Ship linking no longer requires any hullmods,,,Technology
+NRL_REALLY_UNWISE_LINKS_UNBOUND,NRL_REALLY_UNWISE_LINKS_UNBOUND,Boolean,FALSE,, Neural linking no longer links to *a* ship - it links to all of them at once. NB,,,Technology
+qc_titleWarning,You have been warned. ,Header,You have been warned. ,,You have been warned. ,,,Technology
+qc_titleAutomatedShips,Automated Ships,Header,Automated Ships,,Automated Ships,,,Technology
+USE_AUTOMATED_LIMITS,USE_AUTOMATED_LIMITS,Boolean,TRUE,, Disable for no limits at all,,,Technology
+USE_AUTOMATED_LIMIT_BATTLE_SCALING,USE_AUTOMATED_LIMIT_BATTLE_SCALING,Boolean,FALSE,,Your AS points are determined by your battlesize setting/your set divisor,,,Technology
+USE_AUTOMATED_LIMIT_DYNAMIC_SCALING,USE_AUTOMATED_LIMIT_DYNAMIC_SCALING,Boolean,FALSE,, Evil plans,,,Technology
+USE_AUTOMATED_LEVEL_SCALING,USE_AUTOMATED_LEVEL_SCALING,Boolean,TRUE,,Your AS limit will proportionately unlock as you progress to your max level,,,Technology
+AUTOMATED_POINTS_THRESHOLD,AUTOMATED_POINTS_THRESHOLD,Double,120,,Used if limits are enabled but scaling is not,0,100000,Technology
+AUTOMATED_POINTS_THRESHOLD_DIVISOR,AUTOMATED_POINTS_THRESHOLD_DIVISOR,Double,10,,Points = battlesize / this,1,100,Technology
+AUTOMATED_MAX_CR,AUTOMATED_MAX_CR,Double,80,, The maximum CR that an AI ship can reach. Does not affect fleet limit. ,40,200,Technology
+AUTOMATED_OHM_MULT,AUTOMATED_OM_MULT,Double,5,,Multiplier for Omega cores,0,100,Technology
+AUTOMATED_ALPHA_MULT,AUTOMATED_ALPHA_MULT,Double,4,,Multiplier for Alpha cores,0,100,Technology
+AUTOMATED_BETA_MULT,AUTOMATED_BETA_MULT,Double,2,,Multiplier for Beta cores,0,100,Technology
+AUTOMATED_GAMMA_MULT,AUTOMATED_GAMMA_MULT,Double,1,,Multiplier for Gamma cores,0,100,Technology
+HCAI_ACCESS_BONUS,HCAI_ACCESS_BONUS,Double,0.1,,fractional bonus to colony accessibility,0,10,Technology
+HCAI_DEFENSE_BONUS,HCAI_DEFENSE_BONUS,Int,50,,%% extra effectiveness of ground defense,0,1000,Technology
+HCAI_FLEET_BONUS,HCAI_FLEET_BONUS,Double,20,,%% larger fleets from colony,0,100,Technology
+HCAI_STAB_BONUS,HCAI_STAB_BONUS,Double,1,,Additional stability at colony,0,100,Technology
+qc_titleEngineering,Engineering,Header,Engineering,,Engineering,,,Engineering
+qc_titleBulkTransport,Bulk Transport,Header,Bulk Transport,,Bulk Transport,,,Engineering
+BT_CARGO_CAPACITY_MAX_PERCENT,BT_CARGO_CAPACITY_MAX_PERCENT,Double,30,,%%,-1000,1000,Engineering
+BT_FUEL_CAPACITY_MAX_PERCENT,BT_FUEL_CAPACITY_MAX_PERCENT,Double,30,,%%,-1000,1000,Engineering
+BT_PERSONNEL_CAPACITY_MAX_PERCENT,BT_PERSONNEL_CAPACITY_MAX_PERCENT,Double,30,,%%,-1000,1000,Engineering
+BT_CIV_BURN_BONUS,BT_CIV_BURN_BONUS,Int,1,,Flat,-20,20,Engineering
+qc_titleSalvageOperations,Salvage Operations,Header,Salvage Operations,,NB - If multiple mods add salvage buffs unexpected results may occur. Restraint is advised. ,,,Engineering
+SALVAGE_RARES_TOGGLE,SALVAGE_RARES_TOGGLE,Boolean,TRUE,,Whether this skill's bonus applies to drops of rare items,,,Engineering
+SALVAGE_BONUS,SALVAGE_BONUS,Double,50,,,-1000,1000,Engineering
+SALVAGE_RARE_BONUS,SALVAGE_RARE_BONUS,Double,35,,This value is used instead of the other salvage bonus,-1000,1000,Engineering
+SALVAGE_COMBAT_BONUS,SALVAGE_COMBAT_BONUS,Double,30,,Bonus to equipment looting,-1000,1000,Engineering
+SALV_MIN_HULL,SALV_MIN_HULL,Double,30,, %% restored to derelicts on recovery,0,100,Engineering
+SALV_MAX_HULL,SALV_MAX_HULL,Double,40,,,0,100,Engineering
+SALV_MIN_CR,SALV_MIN_CR,Double,30,,,0,100,Engineering
+SALV_MAX_CR,SALV_MAX_CR,Double,40,,,0,100,Engineering
+qc_titleFieldRepairs,Field Repairs,Header,Field Repairs,,Field Repairs,,,Engineering
+FR_REPAIR_RATE_BONUS,FR_REPAIR_RATE_BONUS,Double,100,,%%,-1000,1000,Engineering
+FR_AFTER_BATTLE_REPAIR_PERC,FR_AFTER_BATTLE_REPAIR_PERC,Double,30,,%%,-1000,1000,Engineering
+FR_MAINTENANCE_REDUCTION_PERC,FR_MAINTENANCE_REDUCTION_PERC,Double,25,,%%,-1000,1000,Engineering
+qc_titleOrdinanceExpertise,Ordinance Expertise,Header,Ordinance Expertise,,Ordinance Expertise,,,Engineering
+OE_SWAP_TO_DISCOUNT,OE_SWAP_TO_DISCOUNT,Boolean,TRUE,, Use flux discount per-OP (true) or vanilla flux dissipation bonus (false),,,Engineering
+OE_BONUS_DISSIPATION_PER_OP,OE_BONUS_DISSIPATION_PER_OP,Double,1.5f,,Flat bonus per OP spent on weapons,-100,100,Engineering
+OE_BONUS_CAP_PER_OP,OE_BONUS_CAP_PER_OP,Double,20f,,Flat bonus per OP spent on weapons,-1000,1000,Engineering
+OE_FLUX_GEN_REDUCTION_PER_OP_FRIG,OE_FLUX_GEN_REDUCTION_PER_OP_FRIG,Double,0.2f,,NB: %% bonus multiplied by OP. 0.2%% * 50 OP = 10%% reduction,-10,10,Engineering
+OE_FLUX_GEN_REDUCTION_PER_OP_DEST,OE_FLUX_GEN_REDUCTION_PER_OP_DEST,Double,0.10f,,0.1%% *  80 OP = 8%% reduction,-10,10,Engineering
+OE_FLUX_GEN_REDUCTION_PER_OP_CRSR,OE_FLUX_GEN_REDUCTION_PER_OP_CRSR,Double,0.075f,,%%,-10,10,Engineering
+OE_FLUX_GEN_REDUCTION_PER_OP_CAP,OE_FLUX_GEN_REDUCTION_PER_OP_CAP,Double,0.05f,,%%,-10,10,Engineering
+OE_FLUX_GEN_REDUCTION_PER_OP_OTHER,OE_FLUX_GEN_REDUCTION_PER_OP_OTHER,Double,0.05f,,%%,-10,10,Engineering
+OE_FLUX_GEN_REDUCTION_PER_OP,OE_FLUX_GEN_REDUCTION_PER_OP,Double,0.05f,,%%,-10,10,Engineering
+OE_FLUX_GEN_REDUCTION_CAP,OE_FLUX_GEN_REDUCTION_CAP,Double,15f,,Maximum %% of total weapon flux generation to reduce,1,100,Engineering
+qc_titlePolarizedArmor,Polarized Armor,Header,Polarized Armor,,Polarized Armor,,,Engineering
+PA_MIN_APPLICATION,PA_MIN_APPLICATION,Double,20,, Apply at least this %% of the bonuses at all times,-1000,1000,Engineering
+PA_MIN_APPLICATION_SHIELDLESS,PA_MIN_APPLICATION_SHIELDLESS,Double,40,, vanilla is 50%%,-1000,1000,Engineering
+PA_HULL_DAMAGE_REDUCTION,PA_HULL_DAMAGE_REDUCTION,Double,25,,"%%, unused by default",-1000,1000,Engineering
+PA_OVERLOAD_DURATION_REDUCTION,PA_OVERLOAD_DURATION_REDUCTION,Double,25,,%%,-1000,1000,Engineering
+PA_EFFECTIVE_ARMOR_BONUS_CAP,PA_EFFECTIVE_ARMOR_BONUS_CAP,Double,65,,"%%, maximum armor value bonus",-1000,1000,Engineering
+PA_EMP_REDUCTION_CAP,PA_EMP_REDUCTION_CAP,Double,50,,"%%, maximum EMP reduction",-1000,1000,Engineering
+qc_titleContainmentProcedures,Containment Procedures,Header,Containment Procedures,,Containment Procedures,,,Engineering
+CPRO_CREW_LOSS_REDUCTION_COMBAT,CPRO_CREW_LOSS_REDUCTION_COMBAT,Double,40,, Higher values = fewer losses,-1000,1000,Engineering
+CPRO_CREW_LOSS_REDUCTION_CAMPAIGN,CPRO_CREW_LOSS_REDUCTION_CAMPAIGN,Double,65,, Higher values = fewer losses,-1000,1000,Engineering
+CPRO_FUEL_SALVAGE_BONUS,CPRO_FUEL_SALVAGE_BONUS,Double,50,,%%,-1000,1000,Engineering
+CPRO_FUEL_USE_REDUCTION_PERC,CPRO_FUEL_USE_REDUCTION_PERC,Int,25,,%%,-1000,1000,Engineering
+CPRO_CORONA_EFFECT_PERC_MULT,CPRO_CORONA_EFFECT_PERC_MULT,Int,50,, Percentage of base penalty to remain,-1000,1000,Engineering
+qc_titleJury-Rigging,Jury-Rigging,Header,Jury-Rigging,,Jury-Rigging,,,Engineering
+JR_DIRECT_JUMP_REDUCTION,JR_DIRECT_JUMP_REDUCTION,Double,80,, Reduction in CR loss when transverse jumping,-1000,1000,Engineering
+JR_SURVEY_COST_MULT_PERC,JR_SURVEY_COST_MULT_PERC,Double,50,, %% multiplier,-1000,1000,Engineering
+JR_DMOD_SUPPLY_REDUCTION_MULT,JR_DMOD_SUPPLY_REDUCTION_MULT,Double,0.5f,, Multiplies the 20%% supply use rebate per dmod. Lower numbers = smaller rebate. ,0,10,Engineering
+qc_titleIndustrialPlanning,Industrial Planning,Header,Industrial Planning,,Industrial Planning,,,Engineering
+MRKT_CUSTOM_PRODUCTION_BONUS,MRKT_CUSTOM_PRODUCTION_BONUS,Double,50,,%%,-1000,1000,Engineering
+MRKT_ACCESSIBILITY_BONUS,MRKT_ACCESSIBILITY_BONUS,Double,15,,%%,-1000,1000,Engineering
+MRKT_SHIP_QUAL_BONUS,MRKT_SHIP_QUAL_BONUS,Int,10,,%%,-1000,1000,Engineering
+MRKT_SUPPLY_BONUS,MRKT_SUPPLY_BONUS,Int,1,, In production magnitude,-4,4,Engineering
+qc_titleHullRestoration,Hull Restoration,Header,Hull Restoration,,Hull Restoration,,,Engineering
+HR_CR_PER_SMOD,HR_CR_PER_SMOD,Int,5,,Bonus CR maximum per Smod,-100,100,Engineering
+HR_AVOID_DMOD_CHANCE_MIN,HR_AVOID_DMOD_CHANCE_MIN,Double,0.6f,,Fraction,0,1,Engineering
+HR_AVOID_DMOD_CHANCE_MAX,HR_AVOID_DMOD_CHANCE_MAX,Double,0.8f,,Fraction,0,1,Engineering
+HR_AVOID_DMOD_DP_LOW,HR_AVOID_DMOD_DP_LOW,Double,10,,Ships this DP cost or lower have the maximum chance to avoid Dmods,0,1000,Engineering
+HR_AVOID_DMOD_DP_HIGH,HR_AVOID_DMOD_DP_HIGH,Double,50,,Ships this DP cost or higher have the minimum chance to avoid Dmods,0,1000,Engineering
+qc_titleHullRestorationScript,Hull Restoration Script,Header,Hull Restoration Script,,Hull Restoration Script,,,Engineering
+HRS_REMOVE_FROM_NEW,HRS_REMOVE_FROM_NEW,Boolean,TRUE,, Should dmods be removed from recently acquired ships,,,Engineering
+HRS_NEW_REMOVE_BASE_PROB,HRS_NEW_REMOVE_BASE_PROB,Double,0.2f,,Fraction,0,1,Engineering
+HRS_NEW_REMOVE_PER_DMOD_PROB,HRS_NEW_REMOVE_PER_DMOD_PROB,Double,0.2f,,Fraction,0,1,Engineering
+MONTHS_PER_DMOD_REMOVAL,MONTHS_PER_DMOD_REMOVAL,Double,2,, Base time to repair a dmod is multiplied by all valid categories,-1000,1000,Engineering
+HRS_MULT_CAPITAL,HRS_MULT_CAPITAL,Double,1.5f,,Multiplier for this type,0,100,Engineering
+HRS_MULT_CRUISER,HRS_MULT_CRUISER,Double,1.0f,,Multiplier for this type,0,100,Engineering
+HRS_MULT_DEST,HRS_MULT_DEST,Double,0.75f,,Multiplier for this type,0,100,Engineering
+HRS_MULT_FRIG,HRS_MULT_FRIG,Double,0.5f,,Multiplier for this type,0,100,Engineering
+HRS_MULT_PHASE,HRS_MULT_PHASE,Double,2f,,Multiplier for this type,0,100,Engineering
+HRS_MULT_CIV,HRS_MULT_CIV,Double,0.5f,,Multiplier for this type,0,100,Engineering
+HRS_USE_DP_SCALE,HRS_USE_DP_SCALE,Boolean,FALSE,,unused,,,Engineering
+qc_titleDerelictOperations,Derelict Operations,Header,Derelict Operations,,Derelict Operations,,,Engineering
+DO_MAX_DMODS_TO_COUNT,DO_MAX_DMODS_TO_COUNT,Double,5,,After this many Dmods bonuses will stop scaling,0,20,Engineering
+DO_DMOD_EFFECT_PERC_MULT,DO_DMOD_EFFECT_PERC_MULT,Double,50,, Magnitude of d-mod penalties,-1000,1000,Engineering
+DO_MINUS_DP_PERCENT_PER_DMOD,DO_MINUS_DP_PERCENT_PER_DMOD,Double,6,,Ships are this %% cheaper to deploy per Dmod,-1000,1000,Engineering
+DO_SHIELDLESS_FLUX_BONUS_PERC,DO_SHIELDLESS_FLUX_BONUS_PERC,Int,15,,%% flux dissipation bonus for ships with shield shunts,-1000,1000,Engineering
+qc_titleMilestones,Milestones,Header,Milestones,,Milestones,,,Special
+qc_titleAvoid,"AVOID SPOILERS, TWEAK LATER",Header,"AVOID SPOILERS, TWEAK LATER",,Milestones,,,Special
+PERK_SENSOR_RANGE,PERK_SENSOR_RANGE,Int,50,,,0,1000,Special
+PERK_PHASE_UNNERF,PERK_PHASE_UNNERF,Boolean,TRUE,,,,,Special
+PERK_PHASE_SPD_BONUS,PERK_PHASE_SPD_BONUS,Double,0.25f,,,0,5,Special
+PERK_GATE_RANGE,PERK_GATE_RANGE,Double,12500,,,0,50000,Special
+PERK_USE_AMBUSH,PERK_USE_AMBUSH,Boolean,FALSE,,,,,Special
+PERK_BONUS_CONTACTS,PERK_BONUS_CONTACTS,Int,3,,,0,100,Special
+PERK_KNT_MIN_OPPONENTS,PERK_KNT_MIN_OPPONENTS,Int,5,,,1,10,Special
+PERK_KNT_PPT_PERC,PERK_KNT_PPT_PERC,Double,33,,,0,100,Special
+PERK_KNT_SCDWIND,PERK_KNT_SCDWIND,Boolean,FALSE,,,,,Special
+PERK_STABILITY,PERK_STABILITY,Int,1,,,0,10,Special
+PERK_ECM_FLAT,PERK_ECM_FLAT,Int,1,,,0,10,Special
+PERK_NAV_FLAT,PERK_ECM_FLAT,Int,1,,,0,10,Special
+PERK_REP_BONUS,PERK_REP_BONUS,Int,1,,,0,100,Special
+PERK_REPCHANGE_MIN,PERK_REPCHANGE_MIN,Int,3,,,1,15,Special
+PERK_PIRATES_REP_MAX,PERK_PIRATES_REP_MAX,Int,-50,,,-100,100,Special
+PERK_PIRATES_REP_MAG,PERK_PIRATES_REP_MAG,Int,3,,,0,100,Special
+qc_titleOther mods,Other mods,Header,Other mods,,Other mods,,,Other Mods
+qc_titleNexerelin,Nexerelin,Header,Nexerelin,,Nexerelin,,,Other Mods
+NEX_BONUS_AGENTS,NEX_BONUS_AGENTS,Int,1,,# Of Bonus agents for taking the Officer Management skill,-10,10,Other Mods

@@ -1,0 +1,24 @@
+{
+	"id":"officer_training",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	#"permanent":true,
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsOfficerTraining$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsOfficerTraining$Level1"},
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsOfficerTraining$Level2"},
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsOfficerTraining$Level3"},
+			]
+		},
+	],
+}

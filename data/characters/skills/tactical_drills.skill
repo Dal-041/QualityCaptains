@@ -1,0 +1,19 @@
+{
+	"id":"tactical_drills",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":"ALL_COMBAT_SHIPS",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsTacticalDrills$Level1"}, #Recoil and target leading
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"turretgyros":1}},
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsTacticalDrills$Level2"}, #Ground attack
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsTacticalDrills$Level3"}, #Ground attack casualties
+				{"type":"ALL_OUTPOSTS", "script":"dal.impl.campaign.skills.CaptainsTacticalDrills$Level2B"}, #Ground defense
+			]
+		},
+	],
+}

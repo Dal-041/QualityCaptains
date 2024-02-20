@@ -1,0 +1,16 @@
+{
+	"id":"captains_lucifer",
+	"governingAptitude":"aptitude_milestones",
+	"compressHullmods":false,
+	#"scope":ALL_SHIPS,
+	#"scopeStr":"fleet",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_OUTPOSTS", "script":"dal.impl.campaign.skills.milestones.CaptainsLucifer$Level1"},
+			]
+		},
+	],
+}

@@ -1,0 +1,16 @@
+{
+	"id":"captains_prince",
+	"governingAptitude":"aptitude_milestones",
+	"compressHullmods":false,
+	#"scope":ALL_SHIPS,
+	#"scopeStr":"fleet",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.milestones.CaptainsPrince$Level1"},
+			]
+		},
+	],
+}

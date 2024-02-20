@@ -1,0 +1,25 @@
+{
+	"id":"officer_management",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	#"permanent":true,
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsOfficerManagement$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsOfficerManagement$Level1"}, #Max officers
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsOfficerManagement$Level1B"}, #Command Pts
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsOfficerManagement$Level2"}, #Elite skills
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsNexSkills$AgentBonus"}, #
+			]
+		},
+	],
+}

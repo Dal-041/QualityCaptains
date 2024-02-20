@@ -1,0 +1,12 @@
+{
+	"id":"aptitude_milestones",
+	"governingAptitude":"aptitude_milestones",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.milestones.CaptainsMilestones$Level0"},
+			]
+		},
+	],
+}

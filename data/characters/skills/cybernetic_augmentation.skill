@@ -1,0 +1,24 @@
+{
+	"id":"cybernetic_augmentation",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsCyberneticAugmentation$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsCyberneticAugmentation$Level1"}, #Elite skills bonus
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsCyberneticAugmentation$Level2"}, #Systems Expertise for non-officer ships
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsCyberneticAugmentation$Level3"}, #No-officer Gunnery Implants
+
+			]
+		},
+	],
+}

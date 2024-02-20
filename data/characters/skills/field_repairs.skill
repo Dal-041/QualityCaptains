@@ -1,0 +1,19 @@
+{
+	"id":"field_repairs",
+	"governingAptitude":"industry",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsFieldRepairs$Level1"}, #Faster repairs during campaign
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsFieldRepairs$Level2"}, #Automatic damage repair
+				#{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsFieldRepairs$Level3"}, #Recovered ships have fewer dmods - see Hull Restoration
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsFieldRepairs$Level5"}, #Supply use reduction
+
+			]
+		},
+	],
+}

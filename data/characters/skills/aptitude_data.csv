@@ -1,0 +1,2 @@
+id,name,color,description,order,effect_skill_id,sound1,sound2,sound3,sound4,sound5,sound_story,elite_overlay,elite_overlay_medium,elite_overlay_small
+aptitude_milestones,Milestones,"175,175,175,255",Skills earned by certain actions in the sector that can provide abilities above and beyond most competition.,5,aptitude_milestones,combat1,leadership2,technology3,industry4,combat5,ui_char_spent_story_point_technology,graphics/icons/skills/elite_combat.png,graphics/icons/skills/elite_combat48.png,graphics/icons/skills/elite_combat32.png

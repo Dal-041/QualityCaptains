@@ -1,0 +1,83 @@
+{
+    "id": "QualityCaptains",
+    "name": "Quality Captains",
+    "author": "Dal",
+    "utility": "false",
+    "version": "1.6.0",
+    "description": "Overhauls the skill tree with revised abilities and strengths, allowing specialization, style, and enhanced gameplay.",
+    "gameVersion": "0.97a-RC11",
+	"replace":[
+		#"data/characters/skills/skill_data.csv",
+		#"data/characters/skills/aptitude_data.csv",
+		
+		#Combat
+		"data/characters/skills/helmsmanship.skill", 
+		"data/characters/skills/combat_endurance.skill", 
+		"data/characters/skills/impact_mitigation.skill", 
+		"data/characters/skills/damage_control.skill", 
+		"data/characters/skills/field_modulation.skill", 
+		"data/characters/skills/point_defense.skill", 
+		"data/characters/skills/target_analysis.skill",
+		"data/characters/skills/ballistic_mastery.skill",
+		"data/characters/skills/systems_expertise.skill", 
+		"data/characters/skills/missile_specialization.skill", 
+		#Backcompat
+		"data/characters/skills/shield_modulation.skill", 
+		"data/characters/skills/strike_commander.skill", 
+		"data/characters/skills/ranged_specialization.skill", 
+		"data/characters/skills/phase_mastery.skill", 
+		
+		#Leadership
+		"data/characters/skills/tactical_drills.skill", 
+		"data/characters/skills/coordinated_maneuvers.skill", 
+		"data/characters/skills/wolfpack_tactics.skill", 
+		"data/characters/skills/crew_training.skill", 
+		"data/characters/skills/fighter_uplink.skill", 
+		"data/characters/skills/carrier_group.skill", 
+		"data/characters/skills/officer_training.skill", 
+		"data/characters/skills/officer_management.skill", 
+		"data/characters/skills/best_of_the_best.skill", 
+		"data/characters/skills/support_doctrine.skill", 
+		"data/characters/skills/force_concentration.skill", 
+		#Backcompat
+		"data/characters/skills/weapon_drills.skill", 
+		"data/characters/skills/auxiliary_support.skill", 
+		"data/characters/skills/space_operations.skill", 
+		"data/characters/skills/planetary_operations.skill", 
+
+		#Technology
+		"data/characters/skills/navigation.skill", 
+		"data/characters/skills/sensors.skill", 
+		"data/characters/skills/gunnery_implants.skill", 
+		"data/characters/skills/energy_weapon_mastery.skill", 
+		"data/characters/skills/electronic_warfare.skill", 
+		"data/characters/skills/flux_regulation.skill", 
+		"data/characters/skills/cybernetic_augmentation.skill", 
+		"data/characters/skills/phase_corps.skill", 
+		"data/characters/skills/neural_link.skill", 
+		"data/characters/skills/automated_ships.skill", 
+		#Backcompat
+		"data/characters/skills/special_modifications.skill", 
+		
+		#Engineering
+		"data/characters/skills/bulk_transport.skill", 
+		"data/characters/skills/salvaging.skill", 
+		"data/characters/skills/field_repairs.skill", 
+		"data/characters/skills/ordnance_expert.skill", 
+		"data/characters/skills/polarized_armor.skill", 
+		"data/characters/skills/containment_procedures.skill", 
+		"data/characters/skills/makeshift_equipment.skill", 
+		"data/characters/skills/industrial_planning.skill", 
+		"data/characters/skills/derelict_contingent.skill", 
+		"data/characters/skills/hull_restoration.skill", 
+		#Backcompat
+		"data/characters/skills/reliability_engineering.skill", 
+		"data/characters/skills/colony_management.skill", 
+		
+		#AI Core
+		"data/characters/skills/hypercognition.skill", 
+		
+	],
+	"jars": ["jars/Captains.jar",],
+	"modPlugin":"dal.plugins.Captains_ModPlugin",
+}

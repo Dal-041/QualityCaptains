@@ -1,0 +1,29 @@
+{
+	"id":"sensors",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsSensors$Level0"},
+			]
+		},	
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSensors$Level1"},
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSensors$Level2"},
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSensors$Level3"},
+				#{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSensors$Level2A"},
+				#{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSensors$Level3A"},
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSensors$Level2B"},
+				#{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSensors$Level3B"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"hiressensors":1}},
+				{"type":"ABILITY_UNLOCK", "abilities":["gravitic_scan"]},
+			]
+		},
+	],
+}

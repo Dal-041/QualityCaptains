@@ -1,0 +1,23 @@
+{
+	"id":"automated_ships",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"all automated ships",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsAutomatedShips$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsAutomatedShips$Level2"},
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsAutomatedShips$Level1"},
+			]
+		},
+	],
+}

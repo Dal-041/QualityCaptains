@@ -1,0 +1,29 @@
+{
+	"id":"energy_weapon_mastery",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"PILOTED_SHIP",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsEnergyWeaponsMastery$Level1"}, #Scaling bonus damage based on range and flux level
+
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsEnergyWeaponsMastery$Level4"}, #Bonus energy ammo
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"high_scatter_amp":1}},
+			]
+		},
+		{
+			"name":"Elite",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				#{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsEnergyWeaponsMastery$Level2"}, #Flux cost reduction
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsEnergyWeaponsMastery$Level5"}, #EMP damage reduction
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsEnergyWeaponsMastery$Level3"}, #Beam turn rate bonus
+			]
+		},
+	],
+}

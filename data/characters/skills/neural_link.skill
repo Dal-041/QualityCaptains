@@ -1,0 +1,27 @@
+{
+	"id":"neural_link",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"ships with the Neural Interface hullmod, officers,",
+	"scope2":CUSTOM,
+	"scopeStr2":"ships without officers",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsNeuralLink$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsNeuralLink$Level1"}, #Enables neural linking
+				{"type":"CHARACTER_STATS", "script":"dal.impl.campaign.skills.CaptainsNeuralLink$Level2"}, #Officer max elite skills bonus
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"neural_interface":1}},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"neural_integrator":1}},
+			]
+		},
+	],
+}

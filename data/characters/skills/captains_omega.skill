@@ -1,0 +1,16 @@
+{
+	"id":"captains_omega",
+	"governingAptitude":"aptitude_milestones",
+	"compressHullmods":false,
+	#"scope":ALL_SHIPS,
+	#"scopeStr":"fleet",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.milestones.CaptainsOmega$Level1"}, #flat ECM bonus
+			]
+		},
+	],
+}

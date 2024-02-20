@@ -1,0 +1,25 @@
+{
+	"id":"strike_commander",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"SHIP_FIGHTERS",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP_FIGHTERS", "script":"dal.impl.campaign.skills.CaptainsStrikeCommander$Level2"},
+				{"type":"SHIP_FIGHTERS", "script":"dal.impl.campaign.skills.CaptainsStrikeCommander$Level3"},
+			]
+		},
+		{
+			"name":"Elite",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP_FIGHTERS", "script":"dal.impl.campaign.skills.CaptainsStrikeCommander$Level4"},
+			]
+		},
+	],
+}

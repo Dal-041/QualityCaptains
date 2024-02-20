@@ -1,0 +1,27 @@
+{
+	"id":"phase_corps",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"all combat phase ships",
+	#"scopeStr":"all combat phase ships in fleet",
+	#"scopeStr":"all phase ships with officers, including flagship",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsPhaseCorps$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsPhaseCorps$Level1"}, #Phase upkeep reduction
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsPhaseCorps$Level2"}, #Phase cooldown reduction
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsPhaseCorps$Level3"}, #Phase speed, PPT, sensor bonus
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"adaptive_coils":1, "phase_anchor":1}},
+			]
+		},
+	],
+}

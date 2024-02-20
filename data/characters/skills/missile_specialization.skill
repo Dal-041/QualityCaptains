@@ -1,0 +1,30 @@
+{
+	"id":"missile_specialization",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"PILOTED_SHIP",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsMissileSpecialization$Level1"}, #Capacity
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsMissileSpecialization$Level2"}, #Hitpoints
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsMissileSpecialization$Level3"}, #ROF
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"eccm":1}},		
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"missleracks":1}},		
+			]
+		},
+		{
+			"name":"Elite",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsMissileSpecialization$Level1B"}, #Elite capacity desc
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsMissileSpecialization$Level4"}, #Maneuverability
+			]
+		},
+	],
+}
+

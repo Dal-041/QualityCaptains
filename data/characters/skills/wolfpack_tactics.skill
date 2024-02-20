@@ -1,0 +1,26 @@
+{
+	"id":"wolfpack_tactics",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":CUSTOM,
+	"scopeStr":"all frigates and destroyers with officers, including flagship",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsWolfpackTactics$Level2"}, #Top speed
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsWolfpackTactics$Level1A"}, #Damage to larger, CR, recovery bonus
+			]
+		},
+		{
+			"name":"Elite",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsWolfpackTactics$Level4"}, #0-flux boost bonus
+			]
+		},
+	],
+}

@@ -1,0 +1,20 @@
+{
+	"id":"salvaging",
+	"governingAptitude":"industry",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSalvaging$Level1"}, #Cargo salvage bonuses
+				#{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSalvaging$Level2"}, #Fuel salvage bonuses
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSalvaging$Level3"}, #Combat salvage bonus
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSalvaging$Level1A"},
+				{"type":"FLEET", "script":"dal.impl.campaign.skills.CaptainsSalvaging$Level1B"},
+				#{"type":"ABILITY_UNLOCK", "abilities":["remote_survey"]},
+			]
+		},
+	],
+}

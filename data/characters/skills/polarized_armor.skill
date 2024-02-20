@@ -1,0 +1,34 @@
+{
+	"id":"polarized_armor",
+	"governingAptitude":"industry",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"PILOTED_SHIP",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"dal.impl.campaign.skills.CaptainsPolarizedArmor$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsPolarizedArmor$Level3B"}, #Overload duration reduction
+				#{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsPolarizedArmor$Level4"}, #Hull damage reduction
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsPolarizedArmor$Level2"}, #+Armor with hflux level
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsPolarizedArmor$Level3"}, #+EMP resistance with hflux level
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"shield_shunt":1}},
+			]
+		},
+		{
+			"name":"Elite",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"dal.impl.campaign.skills.CaptainsPolarizedArmor$Level1B"}, #+Minimum armor value
+			]
+		},
+	],
+}

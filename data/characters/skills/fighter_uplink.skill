@@ -1,0 +1,22 @@
+{
+	"id":"fighter_uplink",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	#"scope":"ALL_FIGHTERS",
+	"scope":CUSTOM,
+	"scopeStr":"all fighters",
+	"scope2":CUSTOM,
+	"scopeStr2":"grants +50% (default) increased effect to ships with officers",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsFighterUplink$Level1"}, #Reduced crew casualties
+				{"type":"ALL_FIGHTERS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsFighterUplink$Level2"}, #Speed and maneuvering
+				{"type":"ALL_FIGHTERS_IN_FLEET", "script":"dal.impl.campaign.skills.CaptainsFighterUplink$Level3"}, #Target Leading
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"recovery_shuttles":1}},
+			]
+		},
+	],
+}
