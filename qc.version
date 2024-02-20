@@ -1,0 +1,13 @@
+{
+  "masterVersionFile": "https://raw.githubusercontent.com/Dal-041/QualityCaptains/master/qc.version",
+  "modName": "Quality Captains",
+  "modThreadId": "21038",
+  "directDownloadURL": "https://github.com/Dal-041/QualityCaptains/releases/latest/download/Quality.Captains.zip",
+  "changelogURL": "https://raw.githubusercontent.com/Dal-041/QualityCaptains/master/changelog.md",
+  "modVersion":
+    {
+      "major": "1",
+      "minor": "6",
+      "patch": "0"
+    }
+}

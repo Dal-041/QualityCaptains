@@ -113,3 +113,14 @@ We're back, baby!
 	* Swapped Automated Ships to use level scaling by default from battlesize scaling.
 - Completed LunaLib integration. !* Custom LunaLib settings will now load automatically. *! 
 	* Added some new handling for loading certain settings while on the main menu.
+	
+1.6.0
+- Starsector 0.97 update!
+- Fixed behavior of Carrier skill effects with officers
+- Fixed LunaLib support such that it is a soft requirement
+- Added new 0.97 skill adjustments:
+	* Electronic Warfare received the bonus to capturing objectives (half stock strength by default).
+	* Helmsmanship speed boosts adopted as default
+	* Damage control received "Can repair weapons/engines while taking damage" effect
+	* If Ordnance Expertise was using vanilla effects, mirrored the change to the flux dissipation bonus (2->1.5 default)
+- Support for 0.97 ECM mechanics.
