@@ -1,11 +1,13 @@
 package dal.impl.campaign.skills;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.ShipSkillEffect;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription;
 import com.fs.starfarer.api.util.Misc;
+import org.apache.log4j.Logger;
 
 public class CaptainsOrdnanceExpertise {
 	
@@ -19,6 +21,7 @@ public class CaptainsOrdnanceExpertise {
 	public static float FLUX_GEN_REDUCTION_PER_OP_FRIG = 0.2f;
 	public static float FLUX_GEN_REDUCTION_PER_OP = 0.05f;
 	public static float FLUX_GEN_REDUCTION_CAP = 15f;
+	private static final Logger LOG = Global.getLogger(CaptainsOrdnanceExpertise.class);
 	
 	public static class Level1 implements ShipSkillEffect {
 		
@@ -28,24 +31,24 @@ public class CaptainsOrdnanceExpertise {
 				float flux = FLUX_PER_OP * stats.getVariant().computeWeaponOPCost(cStats);
 				stats.getFluxDissipation().modifyFlat(id, flux);
 			} else if (stats.getVariant() != null) {
-				MutableCharacterStatsAPI cStats = BaseSkillEffectDescription.getCommanderStats(stats);
 				float fluxMult = 0; 
 				if (stats.getVariant().getHullSize() != null) {
+					int OP = getOPFromStats(stats);
 					switch (stats.getVariant().getHullSize()) {
 						case FRIGATE:
-							fluxMult = FLUX_GEN_REDUCTION_PER_OP_FRIG * stats.getVariant().computeWeaponOPCost(cStats);
+							fluxMult = FLUX_GEN_REDUCTION_PER_OP_FRIG * OP;
 							break;
 						case DESTROYER:
-							fluxMult = FLUX_GEN_REDUCTION_PER_OP_DEST * stats.getVariant().computeWeaponOPCost(cStats);
+							fluxMult = FLUX_GEN_REDUCTION_PER_OP_DEST * OP;
 							break;
 						case CRUISER:
-							fluxMult = FLUX_GEN_REDUCTION_PER_OP_CRSR * stats.getVariant().computeWeaponOPCost(cStats);
+							fluxMult = FLUX_GEN_REDUCTION_PER_OP_CRSR * OP;
 							break;
 						case CAPITAL_SHIP:
-							fluxMult = FLUX_GEN_REDUCTION_PER_OP_CAPITAL * stats.getVariant().computeWeaponOPCost(cStats);
+							fluxMult = FLUX_GEN_REDUCTION_PER_OP_CAPITAL * OP;
 							break;
 						default:
-							fluxMult = FLUX_GEN_REDUCTION_PER_OP * stats.getVariant().computeWeaponOPCost(cStats);
+							fluxMult = FLUX_GEN_REDUCTION_PER_OP * OP;
 						break;
 					}
 				} else {
@@ -83,6 +86,17 @@ public class CaptainsOrdnanceExpertise {
 
 		public ScopeDescription getScopeDescription() {
 			return ScopeDescription.PILOTED_SHIP;
+		}
+
+		private int getOPFromStats(MutableShipStatsAPI stats) {
+			MutableCharacterStatsAPI cStats = BaseSkillEffectDescription.getCommanderStats(stats);
+			int OP = 0;
+			try {
+				OP = stats.getVariant().computeWeaponOPCost(cStats);
+			} catch (NullPointerException e) {
+				LOG.error("QC-OE: Could not computeWeaponOPCosts for " + stats.getVariant().getVariantFilePath() + "!");
+			}
+			return OP;
 		}
 	}
 	

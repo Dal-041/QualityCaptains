@@ -18,12 +18,13 @@ import com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.skills.AutomatedShips;
 import com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription;
 import com.fs.starfarer.api.impl.hullmods.Automated;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-public class CaptainsAutomatedShips {
+public class CaptainsAutomatedShips extends AutomatedShips {
 	
 	public static boolean USE_AUTOMATED_LIMITS = true;
 	public static boolean USE_AUTOMATED_BATTLE_SCALING = true;

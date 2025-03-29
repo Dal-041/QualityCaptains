@@ -3,9 +3,9 @@
     "name": "Quality Captains",
     "author": "Dal",
     "utility": "false",
-    "version": "1.6.0",
+    "version": "1.6.9",
     "description": "Overhauls the skill tree with revised abilities and strengths, allowing specialization, style, and enhanced gameplay.",
-    "gameVersion": "0.97a-RC11",
+    "gameVersion": "0.98a",
 	"replace":[
 		#"data/characters/skills/skill_data.csv",
 		#"data/characters/skills/aptitude_data.csv",

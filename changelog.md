@@ -124,3 +124,11 @@ We're back, baby!
 	* Damage control received "Can repair weapons/engines while taking damage" effect
 	* If Ordnance Expertise was using vanilla effects, mirrored the change to the flux dissipation bonus (2->1.5 default)
 - Support for 0.97 ECM mechanics.
+
+1.61
+- Forgot a fix for the perk that extends sensor range - was unintentionally doubling the base value. 
+- A cosmetic typo where "ECM" appeared in settings twice instead of ECM and "NAV"
+
+1.69
+- Recompiled against Starsector 0.98a
+- Published alternate milestones-only minimod, Quality Perks

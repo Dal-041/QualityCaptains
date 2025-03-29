@@ -37,7 +37,7 @@ public class CaptainsAcademician { //Galatia
 		}
 
 		public void apply(MutableFleetStatsAPI stats, String id, float level) {
-			stats.getSensorRangeMod().modifyPercent(id, 100+SENSOR_PERC);
+			stats.getSensorRangeMod().modifyPercent(id, SENSOR_PERC);
 		}
 
 		public void unapply(MutableFleetStatsAPI stats, String id) {

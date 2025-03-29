@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Captains.jar">
+    <output-path>$PROJECT_DIR$/jars</output-path>
+    <root id="archive" name="Captains.jar">
+      <element id="module-output" name="Quality Captains" />
+    </root>
+  </artifact>
+</component>
