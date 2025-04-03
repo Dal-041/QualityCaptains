@@ -1,5 +1,6 @@
 {
-	#See modSettings.json for configuration options or configure while playing with Lunalib. 
+	#Configuring the skills is done ingame using lunalib or by changing the default values in LunaSettings.csv in this folder. 
+	#QC will load from the LunaSettings file itself if LL is not present.
 	
 	#Code stuff
 	"plugins":{

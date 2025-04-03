@@ -813,7 +813,7 @@ public class Captains_Utils {
 					pc.setSkillLevel(CaptainsPrince.skillID, 1);
 					}
 			} else { allMilestones = false; }
-			if (Global.getSector().getMemoryWithoutUpdate().contains("$lke_completed")) {
+			if (Global.getSector().getMemoryWithoutUpdate().contains("$lke_missionCompleted")) {
 				if (Global.getSector().getPlayerStats().getSkillLevel(CaptainsKnight.skillID) == 0) {
 					IntelQCAchievedMilestone notif = new IntelQCAchievedMilestone(CaptainsKnight.skillIcon, CaptainsKnight.skillName);
 					Global.getSector().getIntelManager().addIntel(notif);
