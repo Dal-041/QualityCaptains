@@ -17,7 +17,7 @@ public class CaptainsCarrierGroup {
 		if (stats.getEntity() instanceof ShipAPI) {
 			ShipAPI ship = (ShipAPI) stats.getEntity();
 			if (ship == null || ship.getCaptain() == null) return false;
-			if (ship.getWing() != null) return !ship.getWing().getSourceShip().getCaptain().isDefault();
+			if (ship.getWing() != null && ship.getWing().getSourceShip() != null) return !ship.getWing().getSourceShip().getCaptain().isDefault();
 			return false;
 		} else {
 			return false;

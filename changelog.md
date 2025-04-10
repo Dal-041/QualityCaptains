@@ -131,5 +131,8 @@ We're back, baby!
 
 1.69
 - Recompiled against Starsector 0.98a
-- Fixed an issue preventing the Knight milestone from being awarded. 
 - Published alternate milestones-only minimod, Quality Perks
+- Fix for issue preventing Knight milestone from being awarded
+
+1.70
+- Duplicate fix for Carrier Group officer check.
